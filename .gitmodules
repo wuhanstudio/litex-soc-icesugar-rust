@@ -1,0 +1,3 @@
+[submodule "icesugar"]
+	path = icesugar
+	url = https://github.com/wuxx/icesugar
