@@ -73,7 +73,7 @@ This Rust library `icesugar-pac` was generated using [svd2rust](https://github.c
 $ cargo install svd2rust
 $ python3 -m litex_boards.targets.muselab_icesugar --csr-json csr.json --timer-uptime --build --csr-svd icesugar.svd
 
-$ cargo new icesugar-pac && cd icesugar-pac
+$ cargo new --lib icesugar-pac && cd icesugar-pac
 $ cp ../icesugar.svd ./
 
 $ svd2rust -i icesugar.svd
