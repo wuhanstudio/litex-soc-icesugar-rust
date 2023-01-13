@@ -78,3 +78,11 @@ $ svd2rust -i icesugar.svd
 $ mv generic.rs src/
 $ # Then manually added dependencies to Cargo.toml
 ```
+
+## References
+
+- https://github.com/icebreaker-fpga/icebreaker-litex-examples
+- https://docs.rs/svd2rust/latest/svd2rust/
+- http://pepijndevos.nl/2020/08/04/a-rust-hal-for-your-litex-fpga-soc.html
+- https://github.com/pepijndevos/rust-litex-example
+- https://github.com/pepijndevos/rust-litex-hal
