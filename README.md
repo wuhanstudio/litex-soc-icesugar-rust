@@ -72,5 +72,5 @@ This Rust project was generated using [svd2rust](https://github.com/rust-embedde
 ```
 $ cargo install svd2rust
 $ python3 -m litex_boards.targets.muselab_icesugar --csr-json csr.json --timer-uptime --build --csr-svd icesugar.svd
-$ svd2rust -i STM32F30x.svd
+$ svd2rust -i icesugar.svd
 ```
