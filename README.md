@@ -67,7 +67,7 @@ $ cargo objcopy --target riscv32i-unknown-none-elf --release -- -O binary app.bi
 $ icesprog -o 0x40000 app.bin
 ```
 
-This Rust project was generated using [svd2rust](https://github.com/rust-embedded/svd2rust):
+This Rust library `icesugar-pac` was generated using [svd2rust](https://github.com/rust-embedded/svd2rust):
 
 ```
 $ cargo install svd2rust
