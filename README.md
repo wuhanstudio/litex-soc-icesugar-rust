@@ -76,4 +76,5 @@ $ cargo new icesugar-pac && cd icesugar-pac
 $ cp ../icesugar.svd ./
 $ svd2rust -i icesugar.svd
 $ mv generic.rs src/
+$ # Then manually added dependencies to Cargo.toml
 ```
