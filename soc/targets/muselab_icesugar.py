@@ -13,14 +13,14 @@ from migen.genlib.resetsync import AsyncResetSynchronizer
 
 from litex.gen import LiteXModule
 
-from litex_boards.platforms import muselab_icesugar
-
 from litex.soc.cores.ram import Up5kSPRAM
 from litex.soc.cores.clock import iCE40PLL
 from litex.soc.integration.soc_core import *
 from litex.soc.integration.soc import SoCRegion
 from litex.soc.integration.builder import *
 from litex.soc.cores.led import LedChaser
+
+from ..platforms import muselab_icesugar
 
 kB = 1024
 mB = 1024*kB
@@ -65,13 +65,15 @@ class BaseSoC(SoCCore):
         # CRG --------------------------------------------------------------------------------------
         self.crg = _CRG(platform, sys_clk_freq)
 
-        # SoCCore ----------------------------------------------------------------------------------
+        # SoC Core ----------------------------------------------------------------------------------
         # Disable Integrated ROM/SRAM since too large for iCE40 and UP5K has specific SPRAM.
         kwargs["integrated_sram_size"] = 0
         kwargs["integrated_rom_size"]  = 0
+
         # Set CPU variant
-        if kwargs.get("cpu_type", "vexriscv") == "vexriscv":
-            kwargs["cpu_variant"] = "lite"
+        kwargs["cpu_type"]    = "vexriscv"
+        kwargs["cpu_variant"] = "lite"
+
         SoCCore.__init__(self, platform, sys_clk_freq, ident="LiteX SoC on Muselab iCESugar", **kwargs)
 
         # 128KB SPRAM (used as SRAM) ---------------------------------------------------------------
@@ -121,7 +123,9 @@ def main():
         sys_clk_freq      = args.sys_clk_freq,
         **parser.soc_argdict
     )
+
     builder = Builder(soc, **parser.builder_argdict)
+
     if args.build:
         builder.build(**parser.toolchain_argdict)
 

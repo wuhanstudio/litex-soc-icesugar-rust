@@ -5,20 +5,30 @@
 ## Soc
 
 ```
-$ python3 -m litex_boards.targets.muselab_icesugar --build --doc
-$ python3 -m litex_boards.targets.muselab_icesugar --flash
+# This command uses the upstream default config
+# python3 -m litex_boards.targets.muselab_icesugar --build --doc
+# python3 -m litex_boards.targets.muselab_icesugar --flash
+
+# This command uses our custom config
+$ python3 -m soc.targets.muselab_icesugar --build --doc
+$ python3 -m soc.targets.muselab_icesugar --flash
 ```
 
 ## C Demo
 
 ```
-$ litex_bare_metal_demo --build-path=/home/wuhanstudio/muselab_ice_sugar/build/muselab_icesugar/
+# This command creates the folder demo that includes the source code
+# litex_bare_metal_demo --build-path=./build/muselab_icesugar/
+
+$ cd demo
+$ make
 $ icesprog -w demo.bin -o 0x40000
 ```
 
 ## Rust Demo
 
 ```
+$ cd app
 $ cargo objcopy --target riscv32i-unknown-none-elf --release -- -O binary app.bin
 $ icesprog -o 0x40000 app.bin
 ```
