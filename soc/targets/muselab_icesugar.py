@@ -76,7 +76,7 @@ class BaseSoC(SoCCore):
 
         SoCCore.__init__(self, platform, sys_clk_freq, ident="LiteX SoC on Muselab iCESugar", **kwargs)
 
-        # 128KB SPRAM (used as SRAM) ---------------------------------------------------------------
+        # 64KB SPRAM (used as SRAM) ---------------------------------------------------------------
         self.spram = Up5kSPRAM(size=64*kB)
         self.bus.add_slave("sram", self.spram.bus, SoCRegion(size=64*kB))
 
