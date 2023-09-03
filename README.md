@@ -63,12 +63,6 @@ $ make
 $ icesprog -w demo.bin -o 0x40000
 ```
 
-This C example can be generated using:
-
-```
-$ litex_bare_metal_demo --build-path=/home/YOUR_NAME/litex-soc-icesugar-rust/build/muselab_icesugar/
-```
-
 ## Rust Demo
 
 ```
@@ -81,7 +75,7 @@ This Rust library `icesugar-pac` was generated using [svd2rust](https://github.c
 
 ```
 $ cargo install svd2rust
-$ python3 -m litex_boards.targets.muselab_icesugar --csr-json csr.json --timer-uptime --build --csr-svd icesugar.svd
+$ ython -m soc.targets.muselab_icesugar --csr-json csr.json --timer-uptime --build --csr-svd icesugar.svd
 
 $ cargo new --lib icesugar-pac && cd icesugar-pac
 $ cp ../icesugar.svd ./
