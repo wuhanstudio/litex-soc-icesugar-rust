@@ -80,8 +80,8 @@ $ ython -m soc.targets.muselab_icesugar --csr-json csr.json --timer-uptime --bui
 $ cargo new --lib icesugar-pac && cd icesugar-pac
 $ cp ../icesugar.svd ./
 
-$ svd2rust -i icesugar.svd
-$ mv generic.rs src/
+$ svd2rust -i icesugar.svd --target riscv
+$ mv lib.rs src/
 
 # Then manually added dependencies to Cargo.toml
 ```
