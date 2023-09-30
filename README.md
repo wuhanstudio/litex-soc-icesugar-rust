@@ -75,9 +75,7 @@ You can upload bitstream and firmware to Icesugar board using the tool `icesprog
 ```
 $ sudo apt install libusb-dev libhidapi-dev 
 $ cd litex-picorv32-rtthread
-$ cd icesugar/tools
-$ make
-$ sudo cp icesprog /usr/bin/
+$ sudo cp icesugar/tools/icesprog* /usr/bin/
 ```
 
 ## LiteX SoC
