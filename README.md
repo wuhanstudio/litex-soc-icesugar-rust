@@ -20,8 +20,8 @@ $ mkdir python-litex && cd python-litex
 $ wget https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py
 $ chmod +x litex_setup.py
 $ ./litex_setup.py --init --install --user `whoami` --config=full
-$ sudo apt-get install python3-sphinx
-$ pip3 install meson
+$ sudo apt-get install python3-sphinx python3-sphinxcontrib*
+$ pip3 install meson sphinx sphinxcontrib-wavedrom
 ```
 
 Install IceStorm:
