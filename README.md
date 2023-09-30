@@ -25,7 +25,7 @@ $ ./litex_setup.py --init --install --user `whoami` --config=full
 For C development:
 
 ```
-$ ./litex_setup.py --gcc=riscv
+$ sudo ./litex_setup.py --gcc=riscv
 ```
 
 For Rust development:
@@ -37,6 +37,14 @@ $ rustup component add llvm-tools-preview
 ```
 
 You can upload bitstream and firmware to Icesugar board using the tool `icesprog` in side the folder `icesugar/tools/`.
+
+```
+$ sudo apt install libusb-dev libhidapi-dev 
+$ cd litex-picorv32-rtthread
+$ cd icesugar/tools
+$ make
+$ sudo cp icesprog /usr/bin/
+```
 
 ## LiteX SoC
 
