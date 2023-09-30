@@ -20,6 +20,7 @@ $ mkdir python-litex && cd python-litex
 $ wget https://raw.githubusercontent.com/enjoy-digital/litex/master/litex_setup.py
 $ chmod +x litex_setup.py
 $ ./litex_setup.py --init --install --user `whoami` --config=full
+$ pip3 install meson
 ```
 
 For C development:
