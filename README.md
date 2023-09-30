@@ -84,13 +84,13 @@ $ sudo cp icesprog /usr/bin/
 ```
 $ cd litex-soc-icesugar-rust
 
-# This command uses the upstream default config
-# python3 -m litex_boards.targets.muselab_icesugar --build --doc
-# python3 -m litex_boards.targets.muselab_icesugar --flash
-
 # This command uses our custom config
 $ python3 -m soc.targets.muselab_icesugar --build --doc
 $ python3 -m soc.targets.muselab_icesugar --flash
+
+# This command uses the upstream default config
+# python3 -m litex_boards.targets.muselab_icesugar --build --doc
+# python3 -m litex_boards.targets.muselab_icesugar --flash
 ```
 
 ## C Demo
