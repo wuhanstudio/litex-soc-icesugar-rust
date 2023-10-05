@@ -74,7 +74,7 @@ You can upload bitstream and firmware to Icesugar board using the tool `icesprog
 
 ```
 $ sudo apt install libusb-dev libhidapi-dev 
-$ cd litex-picorv32-rtthread
+$ cd litex-soc-icesugar-rust
 $ sudo cp icesugar/tools/icesprog* /usr/bin/
 ```
 
